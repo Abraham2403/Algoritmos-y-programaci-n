@@ -3,12 +3,13 @@
 
 int main()
 {
-    int x =42;
-    int *ptr = &x;
-printf("valor de x: %d\n", x);
-printf("Valor el que apunta prt: %d\n", *ptr);
-*ptr = 100; //Modificamos el valor de x a traves del puntero
-printf("nuevo valor de x: %d\n", x);
+    int arr[5] = {10, 20, 30, 40, 50};
+    int *ptr = arr; //ptr apunta el primer el elemento del arreglo
+    printf("Primer elemento: %d\n", *ptr);
+    ptr++; //Movemos el punterp al siguiente elemento
+    printf("segundo elemento: %d\n", *ptr);
+    ptr += 2; //movemos el punterdos posiciones adelante
+    printf("cuarto elemento: %d\n", *ptr);
 
     return 0;
 }
