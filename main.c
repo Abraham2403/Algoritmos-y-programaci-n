@@ -1,19 +1,17 @@
 #include <stdio.h>
-#include <stdlib.h> //Aplicamos la Biblioteca
+#include <stdlib.h>
 
 int main()
 {
-    int arr[5] = {1, 2, 3, 4, 5}; //Declaramos  e inicializamos las matrices
-    int *p = arr; //Aqui con el puntero p apuntamos la matriz
+    int arr[5] = {10, 20, 30, 40, 50};
+    int *ptr1 = &arr[0];
+    int *ptr2 = &arr[3];
 
-    for (int i = 0; i < 5; i++) {                   //en esta parte con el bucle for se recorren los elementos de la matriz usando el puntero p
-        printf("Elemento %d: %d\n", i, *(p + i)); //aqui accede al elemento i de la matriz arrr
-        *(p + i) *= 2; //En esta parte se multiplico el valor del elemnto i por 2 i guarda el resultado de nuevo en la matriz.
-    }
-
-    printf("Matriz modificada:\n"); //aqui se imprime los elementos modificados de la matriz
-    for (int i = 0; i < 5; i++) {
-        printf("Elemento %d: %d\n", i, arr[i]);//se imprime cada elemento junto con su indice
-    }
+   if(ptr1 < ptr2) {
+    printf("ptr1 apunta a una direccion menor que ptr2\n");
+   }
+   else{
+        printf("ptr1 apunta a una direecion mayor o igual que ptr2\n");
+}
     return 0;
 }
