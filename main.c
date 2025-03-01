@@ -3,15 +3,12 @@
 
 int main()
 {
-    int arr[5] = {10, 20, 30, 40, 50};
-    int *ptr1 = &arr[0];
-    int *ptr2 = &arr[3];
+    int x =42;
+    int *ptr = &x;
+printf("valor de x: %d\n", x);
+printf("Valor el que apunta prt: %d\n", *ptr);
+*ptr = 100; //Modificamos el valor de x a traves del puntero
+printf("nuevo valor de x: %d\n", x);
 
-   if(ptr1 < ptr2) {
-    printf("ptr1 apunta a una direccion menor que ptr2\n");
-   }
-   else{
-        printf("ptr1 apunta a una direecion mayor o igual que ptr2\n");
-}
     return 0;
 }
