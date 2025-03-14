@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int y = 5;
+    int *ptr = &y;  // ptr apunta a la dirección de y
+
+    *ptr = 20;  // Modifica el valor de y usando el puntero
+
+    printf("El nuevo valor de y es: %d\n", y);  // Verifica el cambio
+
+    return 0;
+}
