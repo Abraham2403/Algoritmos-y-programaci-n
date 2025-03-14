@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int valores[] = {10, 20, 30, 40};
+    int *p1 = valores;
+    int *p2 = valores + 3;
+    printf("Comparacion a) p1 == p2: %s\n", (p1 == p2) ? "Verdadero" : "Falso");
+    printf("Comparacion b) p1 < p2: %s\n", (p1 < p2) ? "Verdadero" : "Falso");
+    printf("Comparacion c) p1 >= (valores + 4): %s\n", (p1 >= (valores + 4)) ? "Verdadero" : "Falso");
+    return 0;
+}
