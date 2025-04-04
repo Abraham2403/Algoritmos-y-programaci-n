@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void guardarNumero(const char *filename, int numero) {
+    FILE *archivo = fopen(filename, "wb");
+    if (archivo == NULL) {
+        perror("Error al abrir el archivo");
+        exit(1);
+    }
+
+    fwrite(&numero, sizeof(int), 1, archivo);
+    fclose(archivo);
+}
+
+void leerNumero(const char *filename) {
+    int numero;
+    FILE *archivo = fopen(filename, "rb");
+    if (archivo == NULL) {
+        perror("Error al abrir el archivo");
+        exit(1);
+    }
+
+    fread(&numero, sizeof(int), 1, archivo);
+    fclose(archivo);
+
+    printf("Numero leido del archivo: %d\n", numero);
+}
+
+int main() {
+    const char *filename = "numero.bin";
+    int numero = 42; // Número a guardar
+
+    guardarNumero(filename, numero);
+    leerNumero(filename);
+
+    return 0;
+}
